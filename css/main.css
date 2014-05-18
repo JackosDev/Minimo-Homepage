@@ -19,12 +19,39 @@ body {
 }
 
 main {
+    /* Support for old browsers */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-box-orient: block-axis;
+    -webkit-box-direction: normal;
+    -moz-box-orient: blox-axis;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    /* End */
+
     display: flex;
     flex-flow: column;
 }
 
 .block {
     display: inherit;
+
+    /* Support for old browsers */
+    -webkit-box-orient: inline-axis;
+    -webkit-box-direction: normal;
+    -moz-box-orient: inline-axis;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    /* End */
+
     flex-flow: row wrap;
     width: 50%;
     margin: 5px auto;
