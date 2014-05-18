@@ -1,6 +1,6 @@
 Minimo
 ======
-A simple homepage alternative made with HTML + CSS.
+A simple homepage alternative made with HTML + CSS. [[Live Preview](http://jackosdev.github.io/Minimo-Homepage/)]
 
 To Do
 -----
