@@ -1,0 +1,57 @@
+/*  Copyright © 2014 Jackos
+    This work is free. You can redistribute it and/or modify it under the
+    terms of the Do What The Fuck You Want To Public License, Version 2,
+    as published by Sam Hocevar. See the COPYING file for more details. */
+
+/* Header */
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40pt;
+}
+
+/* Body */
+html,
+body {
+    font-family: Arial;
+    font-size: 10pt;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+}
+
+.block {
+    display: inherit;
+    flex-flow: row wrap;
+    width: 50%;
+    margin: 5px auto;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+ul {
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    list-style-type: none;
+}
+
+li:first-child {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    background: url('../img/search.png') no-repeat right;
+    padding-right: 15px;
+    border: 0;
+    outline-offset: 1px;
+}
+
+a {
+    text-decoration: none;
+}
