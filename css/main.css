@@ -29,6 +29,8 @@ main {
     width: 50%;
     margin: 5px auto;
     padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid;
     word-wrap: break-word;
 }
 

@@ -5,7 +5,7 @@
 
 /* Header */
 header h1 {
-    color: inherit;
+    color: #aaa;
 }
 
 /* Body */
@@ -17,15 +17,15 @@ body {
 
 .block {
     background-color: #fff;
-    border-radius: 3px;
-    border-bottom: 2px solid #ddd;
+    border-bottom-color: #ddd;
 }
 
 input {
-    outline: 1px solid #ddd;
+    outline-width: 0;
+    outline-color: #ddd;
     color: #aaa;
 }
 
 a {
-    color: inherit;
+    color: #aaa;
 }
