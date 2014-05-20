@@ -74,9 +74,12 @@ input {
     background: url('../img/search.png') no-repeat right;
     padding-right: 15px;
     border: 0;
+    outline-style: solid;
     outline-offset: 1px;
+    color: inherit;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }

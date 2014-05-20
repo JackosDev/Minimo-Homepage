@@ -11,13 +11,13 @@ header h1 {
 /* Body */
 html,
 body {
-    background-color: #eee;
+    background-color: #eaeaea;
     color: #aaa;
 }
 
 .block {
     background-color: #fff;
-    border-bottom-color: #ddd;
+    border-bottom-color: #d9d9d9;
 }
 
 .block.color {
@@ -27,9 +27,4 @@ body {
 input {
     outline-width: 0;
     outline-color: #ddd;
-    color: #aaa;
-}
-
-a {
-    color: #aaa;
 }
