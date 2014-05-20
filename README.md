@@ -1,13 +1,12 @@
 Minimo
 ======
-A simple homepage alternative made with HTML + CSS. [[Live Preview](http://jackosdev.github.io/Minimo-Homepage/)]
+A simple homepage alternative made with HTML + CSS. [[Live Demo](http://jackosdev.github.io/Minimo-Homepage/)]
 
 To Do
 -----
-* Add support for other browsers*
+* ~~Add support for other browsers~~
 * ?
 
-*I'm using _Flexbox_ to align the page, but it doesn't seem to work with a few browsers (works on Firefox 28+). You can send me a request and I'll try to fix it or you can fix it yourself. 
 
 License
 -------
