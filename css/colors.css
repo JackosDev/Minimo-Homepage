@@ -20,6 +20,10 @@ body {
     border-bottom-color: #ddd;
 }
 
+.block.color {
+    border-left-color: #9af;
+}
+
 input {
     outline-width: 0;
     outline-color: #ddd;
