@@ -13,17 +13,34 @@ header h1 {
 }
 
 /* Body */
-html,
 body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     font-family: Arial;
     font-size: 10pt;
 }
 
 main,
-section,
-footer {
+section {
     /* Support for old browsers */
-        /* Gotta fix it again, but I'm lazy */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: inline-axis;
+    -webkit-box-direction: normal;
+    -moz-box-orient: inline-axis;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     /* End */
 
     display: flex;
@@ -34,7 +51,15 @@ footer {
 
 .block {
     /* Support for old browsers */
-        /* Gotta fix it again, but I'm lazy */
+    -webkit-box-flex: 1.0;          /*  I'm not     */
+    -moz-box-flex: 1.0;             /*  sure about  */
+    -ms-flex: 1;                    /*  this part.  */
+    -webkit-flex-grow: 1;
+
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     /* End */
 
     display: inherit;
@@ -44,17 +69,27 @@ footer {
     padding: 10px;
     border-radius: 3px;
     border-bottom: 2px solid;
-    box-shadow: 0 1px 2px rgb(0,0,0, 0.15);
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.3);
     word-wrap: break-word;
+    transition: 0.25s;
+}
+
+.block:hover {
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.5);
+    transition: 0.25s;
 }
 
 .block.full-size {
     width: 100%;
 }
 
+.block.half-size {
+    width: 25%;
+}
+
 .block.color {
     border-bottom: 0;
-    border-left: 2px solid;
+    border-left: 3px solid;
 }
 
 ul {

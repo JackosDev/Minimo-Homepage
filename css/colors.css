@@ -9,7 +9,6 @@ header h1 {
 }
 
 /* Body */
-html,
 body {
     background-color: #eaeaea;
     color: #aaa;
@@ -25,6 +24,6 @@ body {
 }
 
 input {
-    outline-width: 0;
+    outline-width: 0px;
     outline-color: #ddd;
 }
