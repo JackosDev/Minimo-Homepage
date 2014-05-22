@@ -1,0 +1,37 @@
+/*  Copyright © 2014 Jackos
+    This work is free. You can redistribute it and/or modify it under the
+    terms of the Do What The Fuck You Want To Public License, Version 2,
+    as published by Sam Hocevar. See the COPYING file for more details. */
+
+/* Body */
+main,
+section {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    -webkit-box-orient: inline-axis;
+    -webkit-box-direction: normal;
+    -moz-box-orient: inline-axis;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.block {
+    -webkit-box-flex: 1.0;          /*  I'm not     */
+    -moz-box-flex: 1.0;             /*  sure about  */
+    -ms-flex: 1;                    /*  this part.  */
+    -webkit-flex-grow: 1;
+
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
