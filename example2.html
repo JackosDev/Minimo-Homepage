@@ -13,6 +13,8 @@
         <title>Homepage</title>
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <link rel="stylesheet" type="text/css" href="css/colors.css" />
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>
         <header>
@@ -41,14 +43,14 @@
             </nav>
         </main>
         <section>
-            <form class="block full-size" method="get" action="https://google.com/search">
-                <input type="text" name="q" placeholder="Google Search" autofocus />
-            </form>
+            <span class="block color" id="search-google" style="cursor: pointer;">Google</span>
+            <span class="block color" id="search-nyaa" style="cursor: pointer;">Nyaa</span>
+            <span class="block color" id="search-duckduckgo" style="cursor: pointer;">Duck Duck Go</span>
         </section>
-        <br/>
         <section>
-            <a class="block color" href="example1.html">Wanna see more&nbsp;<i>blocks</i>&nbsp;in action?</a>
-            <a class="block color" href="example2.html">Or a&nbsp;<i>not-so-interesting</i>&nbsp;example?</a>
+            <form id="search-form" class="block full-size" method="get" action="https://google.com/search">
+                <input id="search-input" type="text" name="q" placeholder="Google Search" autofocus />
+            </form>
         </section>
         <footer>
             <!-- Footer -->
