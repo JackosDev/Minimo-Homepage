@@ -24,14 +24,42 @@ section {
     -webkit-flex-wrap: wrap;
 }
 
-.block {
-    -webkit-box-flex: 1.0;          /*  I'm not     */
-    -moz-box-flex: 1.0;             /*  sure about  */
-    -ms-flex: 1;                    /*  this part.  */
-    -webkit-flex-grow: 1;
+main > *,
+section > * {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
 
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
+    
+    -webkit-box-flex: 1.0;
+    -moz-box-flex: 1.0;
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
 }
+
+.block.full-size {
+    -webkit-box-flex: 1.0;
+    -moz-box-flex: 1.0;
+    -ms-flex: 1 1 100%;
+    -webkit-flex-basis: 100%;
+}
+
+.block.half-size {
+    -webkit-box-flex: 0.44;
+    -moz-box-flex: 0.44;
+    -ms-flex: 1 1 44%;
+    -webkit-flex-basis: 44%;
+}
+
+input {
+    -webkit-box-flex: 1.0;
+    -moz-box-flex: 1.0;
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+}
+
