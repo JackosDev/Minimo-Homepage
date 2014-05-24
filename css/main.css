@@ -5,10 +5,11 @@
     terms of the Do What The Fuck You Want To Public License, Version 2,
     as published by Sam Hocevar. See the COPYING file for more details. */
 
+
 /* Header */
 header {
-    margin: 35px 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 35px 0;
 }
 
 header h1 {
@@ -18,7 +19,6 @@ header h1 {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 40pt;
-    text-shadow: 0 1px rgba(255,255,255, 0.6);
 }
 
 /* Body */
@@ -31,10 +31,15 @@ body {
 }
 
 main {
+    margin: 20px auto;
     display: flex;
     flex-flow: row wrap;
-    margin: 0 auto;
     width: 50%; /* Change as you please */
+}
+
+nav,
+section {
+    width: 100%;
 }
 
 main > *,
@@ -60,16 +65,23 @@ section > * {
 }
 
 .block.full-size {
-    flex-basis: 100%;
+    width: 100%;
 }
 
 .block.half-size {
-    flex-basis: 44%; /* You may need to change this number */
+    /* 30px = margin * 2 + padding * 2 + border-left = (5 * 2 + 10 * 2 + 3) */
+    width: calc(50% - 33px);
 }
 
 .block.color {
     border-bottom: 0;
     border-left: 3px solid;
+}
+
+.block.button {
+    border-bottom: 3px solid rgba(0,0,0, 0.15);
+    justify-content: center;
+    font-weight: bold;
 }
 
 ul {

@@ -4,7 +4,8 @@
     as published by Sam Hocevar. See the COPYING file for more details. */
 
 /* Header */
-header h1 {
+header {
+    background-color: inherit;
     color: #aaa;
 }
 
@@ -20,7 +21,12 @@ body {
 }
 
 .block.color {
-    border-left-color: #9af;
+    border-left-color: #0af;
+}
+
+.block.button {
+    background-color: #0af;
+    color: #fff;
 }
 
 input {

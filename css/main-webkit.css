@@ -4,8 +4,7 @@
     as published by Sam Hocevar. See the COPYING file for more details. */
 
 /* Body */
-main,
-section {
+main {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -62,4 +61,3 @@ input {
     -ms-flex: 1 1 auto;
     -webkit-flex: 1 1 auto;
 }
-
