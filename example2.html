@@ -17,11 +17,11 @@
         <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>
-        <header>
-            <h1>Homepage</h1>
-        </header>
-
         <main>
+            <header>
+                <h1>Homepage</h1>
+            </header>
+
             <nav class="block full-size">
                 <ul>
                     <li><a href="http://4chan.org">4chan</a></li>
@@ -41,19 +41,18 @@
                     <li><a href="http://github.com/JackosDev/Minimo-Homepage">GitHub</a></li>
                 </ul>
             </nav>
+
+            <section>
+                <span class="block color" id="search-google" style="cursor: pointer;">Google</span>
+                <span class="block color" id="search-nyaa" style="cursor: pointer;">Nyaa</span>
+                <span class="block color" id="search-duckduckgo" style="cursor: pointer;">Duck Duck Go</span>
+            </section>
+
+            <section class="block full-size">
+                <form id="search-form" method="get" action="https://google.com/search">
+                    <input id="search-input" type="text" name="q" placeholder="Google Search" autofocus />
+                </form>
+            </section>
         </main>
-        <section>
-            <span class="block color" id="search-google" style="cursor: pointer;">Google</span>
-            <span class="block color" id="search-nyaa" style="cursor: pointer;">Nyaa</span>
-            <span class="block color" id="search-duckduckgo" style="cursor: pointer;">Duck Duck Go</span>
-        </section>
-        <section>
-            <form id="search-form" class="block full-size" method="get" action="https://google.com/search">
-                <input id="search-input" type="text" name="q" placeholder="Google Search" autofocus />
-            </form>
-        </section>
-        <footer>
-            <!-- Footer -->
-        </footer>
     </body>
 </html>
