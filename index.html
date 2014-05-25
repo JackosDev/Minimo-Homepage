@@ -11,8 +11,15 @@
     <head>
         <meta charset="UTF-8">
         <title>Homepage</title>
+
         <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <link rel="stylesheet" type="text/css" href="css/colors.css" />
+        <link rel="stylesheet" type="text/css" href="css/theme.css" id="theme" />
+        
+        <script>
+            function changeTheme(url) {
+                document.getElementById("theme").setAttribute("href", url);
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -47,7 +54,10 @@
             </section>
 
             <section style="margin-top: 30px;">
-                <a class="block button" href="home.html">Wanna see more&nbsp;<i>blocks</i>&nbsp;in action?</a>
+                <span class="block button half-size" onclick="changeTheme('css/theme.css')">Light Theme</span>
+                <span class="block button half-size" onclick="changeTheme('css/theme-dark.css')">Dark Theme</span>
+
+                <a class="block button full-size" href="home.html">Wanna see more&nbsp;<i>blocks</i>&nbsp;in action?</a>
             </section>
         </main>
     </body>

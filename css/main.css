@@ -55,12 +55,12 @@ section > * {
     border-radius: 3px;
     border-bottom: 2px solid;
     word-wrap: break-word;
-    transition: 0.25s;
+    transition: all 0.25s;
 }
 
 .block:hover {
     box-shadow: 0 1px 2px rgba(0,0,0, 0.3);
-    transition: 0.25s;
+    transition: all 0.25s;
 }
 
 .block.full-size {
@@ -81,6 +81,7 @@ section > * {
     border-bottom: 3px solid rgba(0,0,0, 0.15);
     justify-content: center;
     font-weight: bold;
+    cursor: pointer;
 }
 
 ul {
@@ -97,7 +98,7 @@ li:first-child {
 
 input {
     flex: 1 1 auto;
-    background: url('../img/search.png') no-repeat right;
+    background: url("../img/search.png") no-repeat right;
     padding-right: 15px;
     border: 0;
     outline-style: solid;

@@ -1,0 +1,36 @@
+/*  Copyright © 2014 Jackos
+    This work is free. You can redistribute it and/or modify it under the
+    terms of the Do What The Fuck You Want To Public License, Version 2,
+    as published by Sam Hocevar. See the COPYING file for more details. */
+
+/* Header */
+header {
+    background-color: inherit;
+    color: #6f6f6f;
+}
+
+/* Body */
+body {
+    background-color: #272727;
+    color: #6f6f6f;
+}
+
+.block {
+    background-color: #3f3f3f;
+    border-bottom-color: rgba(0,0,0, 0.15);
+}
+
+.block.color {
+    border-left-color: rgba(0,0,0, 0.2);
+}
+
+.block.button {
+    background-color: #333;
+    color: #aaa;
+}
+
+input {
+    outline-width: 0px;
+    outline-color: #ddd;
+    background-image: url("../img/search-black.png");
+}
