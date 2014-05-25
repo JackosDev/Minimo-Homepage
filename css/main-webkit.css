@@ -41,20 +41,6 @@ section > * {
     -webkit-flex: 1 1 auto;
 }
 
-.block.full-size {
-    -webkit-box-flex: 1.0;
-    -moz-box-flex: 1.0;
-    -ms-flex: 1 1 100%;
-    -webkit-flex-basis: 100%;
-}
-
-.block.half-size {
-    -webkit-box-flex: 0.44;
-    -moz-box-flex: 0.44;
-    -ms-flex: 1 1 44%;
-    -webkit-flex-basis: 44%;
-}
-
 input {
     -webkit-box-flex: 1.0;
     -moz-box-flex: 1.0;
