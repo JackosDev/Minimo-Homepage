@@ -16,9 +16,56 @@
         <link rel="stylesheet" type="text/css" href="css/theme.css" id="theme" />
         
         <script>
-            function changeTheme(url) {
-                document.getElementById("theme").setAttribute("href", url);
+            var element_theme = document.getElementById("theme");
+            var element_html = document.documentElement;
+
+            function toggleTheme() {
+                switch (element_theme.getAttribute("href")) {
+                    case "css/theme.css":
+                        element_theme.setAttribute("href", "css/theme-dark.css");
+                            if (mascot_status == 0) { setMascot(); } 
+                            else if (mascot_status == 1) { hideMascot(); }
+                        break;
+                    case "css/theme-dark.css":
+                        element_theme.setAttribute("href", "css/theme.css");
+                            if (mascot_status == 0) { setMascot(); } 
+                            else if (mascot_status == 1) { hideMascot(); }
+                        break;
+                }
             }
+
+            function toggleMascot() {
+                switch (mascot_status) {
+                    case 0:
+                        hideMascot();
+                        mascot_status = 1;
+                        break;
+                    case 1:
+                        setMascot();
+                        mascot_status = 0;
+                        break;
+                }
+            }
+            
+            function setMascot() {
+                switch (element_theme.getAttribute("href")) {
+                    case "css/theme.css":
+                        element_html.style.backgroundImage = "url(img/mascot1.png)";
+                        break;
+                    case "css/theme-dark.css":
+                        element_html.style.backgroundImage = "url(img/mascot2.png)";
+                        break;
+                }
+            }
+            
+            function hideMascot() {
+                element_html.style.backgroundImage = "url()";
+            }
+    
+            window.onload = function() {
+                mascot_status = 0;
+                toggleMascot();
+            };
         </script>
     </head>
     <body>
@@ -54,11 +101,11 @@
             </section>
 
             <section style="margin-top: 30px;">
-                <span class="block button half-size" onclick="changeTheme('css/theme.css')">Light Theme</span>
-                <span class="block button half-size" onclick="changeTheme('css/theme-dark.css')">Dark Theme</span>
-
-                <a class="block button full-size" href="home.html">Wanna see more&nbsp;<i>blocks</i>&nbsp;in action?</a>
-            </section>
+                <a class="block color full-size" href="home.html">Wanna see more&nbsp;<i>blocks</i>&nbsp;in action?</a>
+                
+                <span class="block button" onclick="toggleTheme()">Change Theme</span>
+                <span class="block button" onclick="toggleMascot()">Toggle Mascot</span>
+           </section>
         </main>
     </body>
 </html>

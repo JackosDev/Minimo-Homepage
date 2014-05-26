@@ -4,14 +4,19 @@
     as published by Sam Hocevar. See the COPYING file for more details. */
 
 /* Header */
-header {
-    background-color: inherit;
+header h1 {
     color: #aaa;
 }
 
 /* Body */
-body {
+html {
     background-color: #eaeaea;
+    background-image: url("../img/mascot.png");
+    background-position: left bottom;
+    background-size: auto 400px;
+}
+
+body {
     color: #aaa;
 }
 

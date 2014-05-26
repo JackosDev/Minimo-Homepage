@@ -22,12 +22,16 @@ header h1 {
 }
 
 /* Body */
+html,
 body {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
     font-family: Arial;
     font-size: 10pt;
+    background-repeat: no-repeat;
+    transition: all 0.25s;
 }
 
 main {
