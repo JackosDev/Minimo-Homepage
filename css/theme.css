@@ -5,6 +5,9 @@
 
 /* Header */
 header h1 {
+    text-transform: uppercase;
+    font-size: 40pt;
+    font-weight: bold;
     color: #aaa;
 }
 
@@ -17,6 +20,8 @@ html {
 }
 
 body {
+    font-family: Arial;
+    font-size: 10pt;
     color: #aaa;
 }
 
@@ -37,4 +42,11 @@ body {
 input {
     outline-width: 0px;
     outline-color: #ddd;
+    color: #aaa;
 }
+
+a {
+    text-decoration: none;
+    color: #aaa;
+}
+

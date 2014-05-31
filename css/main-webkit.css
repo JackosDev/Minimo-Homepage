@@ -4,26 +4,25 @@
     as published by Sam Hocevar. See the COPYING file for more details. */
 
 /* Body */
-main {
+nav,
+section {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
 
-    -webkit-box-orient: inline-axis;
-    -webkit-box-direction: normal;
-    -moz-box-orient: inline-axis;
-    -moz-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-flex-direction: row;
-
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
+
+    -webkit-box-flex: 1.0;
+    -moz-box-flex: 1.0;
+    -ms-flex: 1 1 auto;
+    -webkit-flex-grow: 1;
 }
 
-main > *,
+nav > *,
 section > * {
     display: -webkit-box;
     display: -moz-box;
@@ -34,16 +33,73 @@ section > * {
     -moz-box-lines: multiple;
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
-    
+
     -webkit-box-flex: 1.0;
     -moz-box-flex: 1.0;
     -ms-flex: 1 1 auto;
-    -webkit-flex: 1 1 auto;
+    -webkit-flex-grow: 1;
+
+    -webkit-box-orient: block-axis;
+    -webkit-box-direction: normal;
+    -moz-box-orient: block-axis;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.block {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+
+    -webkit-box-orient: inline-axis;
+    -webkit-box-direction: normal;
+    -moz-box-orient: inline-axis;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+
+    -webkit-box-flex: 1.0;
+    -moz-box-flex: 1.0;
+    -ms-flex: 1 1 auto;
+    -webkit-flex-grow: 1;
+}
+
+.block.full-size {
+    -webkit-box-flex: 1.0;
+    -moz-box-flex: 1.0;
+    -ms-flex: 1 1 100%;
+    -webkit-flex-basis: 100%;
+}
+
+.block.half-size {
+    -webkit-box-flex: 0.5;
+    -moz-box-flex: 0.5;
+    -ms-flex: 1 1 50%;
+    -webkit-flex-basis: 50%;
+
+    -webkit-box-flex: 0.0;
+    -moz-box-flex: 0.0;
+    -ms-flex: 0 1 auto;
+    -webkit-flex-grow: 0;
+}
+
+.block.button {
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
 }
 
 input {
     -webkit-box-flex: 1.0;
     -moz-box-flex: 1.0;
-    -ms-flex: 1 1 auto;
-    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 100%;
+    -webkit-flex-basis: 100%;
 }

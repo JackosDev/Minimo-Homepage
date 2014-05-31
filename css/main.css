@@ -5,74 +5,70 @@
     terms of the Do What The Fuck You Want To Public License, Version 2,
     as published by Sam Hocevar. See the COPYING file for more details. */
 
-
 /* Header */
 header {
-    margin: 0 auto;
-    padding: 35px 0;
+    text-align: center;
 }
 
 header h1 {
-    margin: 0 auto;
+    margin: 35px 0;
     padding: 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 40pt;
 }
 
+
 /* Body */
+html {
+    height: 100%;
+    width: 100%;
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial;
-    font-size: 10pt;
     background-repeat: no-repeat;
 }
 
 main {
-    margin: 20px auto;
-    display: flex;
-    flex-flow: row wrap;
-    width: 50%; /* Change as you please */
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
 }
 
 nav,
 section {
-    width: 100%;
-}
-
-main > *,
-section > * {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 auto;
+    flex-grow: 1;
+}
+
+nav > *,
+section > * {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .block {
-    margin: 5px;
-    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1;
+    transition: box-shadow 0.25s;
     border-radius: 3px;
     border-bottom: 2px solid;
-    word-wrap: break-word;
-    transition: all 0.25s;
-}
-
-.block:hover {
-    box-shadow: 0 1px 2px rgba(0,0,0, 0.3);
-    transition: all 0.25s;
+    margin: 10px 10px 0 10px;
+    padding: 10px;
 }
 
 .block.full-size {
-    width: 100%;
+    flex-basis: 100%;
 }
 
 .block.half-size {
-    /* 30px = margin * 2 + padding * 2 + border-left = (5 * 2 + 10 * 2 + 3) */
-    width: calc(50% - 33px);
+    flex-basis: 50%
+    flex-grow: 0;
 }
 
 .block.color {
@@ -82,34 +78,33 @@ section > * {
 
 .block.button {
     border-bottom: 3px solid rgba(0,0,0, 0.15);
-    justify-content: center;
     font-weight: bold;
+    justify-content: center;
     cursor: pointer;
 }
 
-ul {
-    margin: 0 auto;
-    padding: 5px;
-    text-align: center;
-    list-style-type: none;
+.block:hover {
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.3);
+    transition: box-shadow 0.25s;
 }
 
-li:first-child {
+.block ul {
+    margin: 0 auto;
+    padding: 10px 20px;
+    list-style: none;
+    text-align: center;
+}
+
+.block li:first-child {
     text-transform: uppercase;
     font-weight: bold;
 }
 
 input {
-    flex: 1 1 auto;
+    flex-basis: 100%;
     background: url("../img/search.png") no-repeat right;
     padding-right: 15px;
     border: 0;
     outline-style: solid;
     outline-offset: 1px;
-    color: inherit;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
