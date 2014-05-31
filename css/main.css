@@ -58,7 +58,7 @@ section > * {
     transition: box-shadow 0.25s;
     border-radius: 3px;
     border-bottom: 2px solid;
-    margin: 10px 10px 0 10px;
+    margin: 10px 5px 0 5px;
     padding: 10px;
 }
 
@@ -84,7 +84,7 @@ section > * {
 }
 
 .block:hover {
-    box-shadow: 0 1px 2px rgba(0,0,0, 0.3);
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.25);
     transition: box-shadow 0.25s;
 }
 
