@@ -1,25 +1,16 @@
-/*  Copyright © 2014 Jackos
-    This work is free. You can redistribute it and/or modify it under the
-    terms of the Do What The Fuck You Want To Public License, Version 2,
-    as published by Sam Hocevar. See the COPYING file for more details. */
-
-/* Body */
 nav,
 section {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: flex;
 
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
-
-    -webkit-box-flex: 1.0;
-    -moz-box-flex: 1.0;
-    -ms-flex: 1 1 auto;
-    -webkit-flex-grow: 1;
+    flex-wrap: wrap;
 }
 
 nav > *,
@@ -28,16 +19,7 @@ section > * {
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-
-    -webkit-box-flex: 1.0;
-    -moz-box-flex: 1.0;
-    -ms-flex: 1 1 auto;
-    -webkit-flex-grow: 1;
+    display: flex;
 
     -webkit-box-orient: block-axis;
     -webkit-box-direction: normal;
@@ -45,30 +27,38 @@ section > * {
     -moz-box-direction: normal;
     -ms-flex-direction: column;
     -webkit-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-box-flex: 1.0;
+    -moz-box-flex: 1.0;
+    -ms-flex: 1 0 auto;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
 }
 
 .block {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-
+    -webkit-box-flex: 1.0;
+    -moz-box-flex: 1.0;
+    -ms-flex: 1 0 auto;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    
     -webkit-box-orient: inline-axis;
     -webkit-box-direction: normal;
     -moz-box-orient: inline-axis;
     -moz-box-direction: normal;
     -ms-flex-direction: row;
     -webkit-flex-direction: row;
+    flex-direction: row;
 
-    -webkit-box-flex: 1.0;
-    -moz-box-flex: 1.0;
-    -ms-flex: 1 1 auto;
-    -webkit-flex-grow: 1;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    flex-flow: row wrap;
+    -webkit-transition: box-shadow 0.25s;
 }
 
 .block.full-size {
@@ -76,18 +66,25 @@ section > * {
     -moz-box-flex: 1.0;
     -ms-flex: 1 1 100%;
     -webkit-flex-basis: 100%;
+    flex-basis: 100%;
 }
 
 .block.half-size {
     -webkit-box-flex: 0.5;
     -moz-box-flex: 0.5;
-    -ms-flex: 1 1 50%;
-    -webkit-flex-basis: 50%;
-
-    -webkit-box-flex: 0.0;
-    -moz-box-flex: 0.0;
-    -ms-flex: 0 1 auto;
+    -ms-flex: 1 0 0.5;
     -webkit-flex-grow: 0;
+    -webkit-flex-basis: -0.5;
+    flex-basis: calc(50% - 30px);
+    flex-grow: 0;
+}
+
+.block.color.half-size {
+    -webkit-box-flex: 0.5;
+    -moz-box-flex: 0.5;
+    -ms-flex: 1 0 0.5;
+    -webkit-flex-basis: 0.5;
+    flex-basis: calc(50% - (30px + 3px));
 }
 
 .block.button {
@@ -95,6 +92,11 @@ section > * {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.block:hover {
+    -webkit-transition: box-shadow 0.25s;
 }
 
 input {
@@ -102,4 +104,5 @@ input {
     -moz-box-flex: 1.0;
     -ms-flex: 1 1 100%;
     -webkit-flex-basis: 100%;
+    flex-basis: 100%;
 }

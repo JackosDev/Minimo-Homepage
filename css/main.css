@@ -5,6 +5,7 @@
     terms of the Do What The Fuck You Want To Public License, Version 2,
     as published by Sam Hocevar. See the COPYING file for more details. */
 
+
 /* Header */
 header {
     text-align: center;
@@ -40,25 +41,22 @@ nav,
 section {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 1;
 }
 
 nav > *,
 section > * {
     display: flex;
-    flex-grow: 1;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .block {
-    display: flex;
+    flex-grow: 1;
     flex-flow: row wrap;
-    flex: 1 1;
     transition: box-shadow 0.25s;
     border-radius: 3px;
     border-bottom: 2px solid;
-    margin: 10px 5px 0 5px;
+    margin: 0 5px 10px 5px;
     padding: 10px;
 }
 
@@ -67,8 +65,12 @@ section > * {
 }
 
 .block.half-size {
-    flex-basis: 50%
+    flex-basis: calc(50% - 30px);
     flex-grow: 0;
+}
+
+.block.color.half-size {
+    flex-basis: calc(50% - (30px + 3px));
 }
 
 .block.color {
@@ -79,12 +81,12 @@ section > * {
 .block.button {
     border-bottom: 3px solid rgba(0,0,0, 0.15);
     font-weight: bold;
-    justify-content: center;
     cursor: pointer;
+    justify-content: center;
 }
 
 .block:hover {
-    box-shadow: 0 1px 2px rgba(0,0,0, 0.25);
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.3);
     transition: box-shadow 0.25s;
 }
 
