@@ -23,13 +23,13 @@
                 switch (element_theme.getAttribute("href")) {
                     case "css/theme.css":
                         element_theme.setAttribute("href", "css/theme-dark.css");
-                            if (mascot_status == 0) { setMascot(); } 
-                            else if (mascot_status == 1) { hideMascot(); }
+                            if (mascot_status == 0) { hideMascot(); } 
+                            else { setMascot(); }
                         break;
                     case "css/theme-dark.css":
                         element_theme.setAttribute("href", "css/theme.css");
-                            if (mascot_status == 0) { setMascot(); } 
-                            else if (mascot_status == 1) { hideMascot(); }
+                            if (mascot_status == 0) { hideMascot(); } 
+                            else { setMascot(); }
                         break;
                 }
             }
@@ -37,17 +37,16 @@
             function toggleMascot() {
                 switch (mascot_status) {
                     case 0:
-                        hideMascot();
-                        mascot_status = 1;
+                        setMascot();
                         break;
                     case 1:
-                        setMascot();
-                        mascot_status = 0;
+                        hideMascot();
                         break;
                 }
             }
             
             function setMascot() {
+                mascot_status = 1;
                 switch (element_theme.getAttribute("href")) {
                     case "css/theme.css":
                         element_html.style.backgroundImage = "url(img/mascot1.png)";
@@ -59,12 +58,12 @@
             }
             
             function hideMascot() {
+                mascot_status = 0;
                 element_html.style.backgroundImage = "url()";
             }
     
             window.onload = function() {
-                mascot_status = 0;
-                toggleMascot();
+                hideMascot();
                 element_html.style.transition = "all 0.25s";
                 element_html.style.setProperty("-webkit-transition", "all 0.25s");
             };
