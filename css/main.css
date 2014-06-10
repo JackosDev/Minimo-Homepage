@@ -109,4 +109,5 @@ input {
     border: 0;
     outline-style: solid;
     outline-offset: 1px;
+    min-height: 15px;
 }

@@ -43,6 +43,7 @@ To Do
 * ~~Add mascots?~~ **Done**.
 * ~~Add idiot-proof and useless explanations because I don't know what to do with my life anymore? **Done**.~~
 * ~~Rewrite main.css~~ **Done**.
+* Add configuration menu?
 * ???
 
 
