@@ -1,8 +1,3 @@
-/*  Copyright © 2014 Jackos
-    This work is free. You can redistribute it and/or modify it under the
-    terms of the Do What The Fuck You Want To Public License, Version 2,
-    as published by Sam Hocevar. See the COPYING file for more details. */
-
 /* Header */
 header h1 {
     text-transform: uppercase;
@@ -14,9 +9,6 @@ header h1 {
 /* Body */
 html {
     background-color: #eaeaea;
-    background-image: url("../img/mascot.png");
-    background-position: left bottom;
-    background-size: auto 400px;
 }
 
 body {
@@ -50,3 +42,9 @@ a {
     color: #aaa;
 }
 
+/* Mascot */
+#mascot {
+    background-image: url("../images/mascots/mascot1.png");
+    background-position: left bottom;
+    background-size: auto 400px;
+}

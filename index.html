@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-    Copyright © 2014 Jackos
-    This work is free. You can redistribute it and/or modify it under the
-    terms of the Do What The Fuck You Want To Public License, Version 2,
-    as published by Sam Hocevar. See the COPYING file for more details.
--->
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -14,62 +7,22 @@
 
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <link rel="stylesheet" type="text/css" href="css/theme.css" id="theme" />
-        
-        <script>
-            var element_theme = document.getElementById("theme");
-            var element_html = document.documentElement;
 
-            function toggleTheme() {
-                switch (element_theme.getAttribute("href")) {
-                    case "css/theme.css":
-                        element_theme.setAttribute("href", "css/theme-dark.css");
-                            if (mascot_status == 0) { hideMascot(); } 
-                            else { setMascot(); }
-                        break;
-                    case "css/theme-dark.css":
-                        element_theme.setAttribute("href", "css/theme.css");
-                            if (mascot_status == 0) { hideMascot(); } 
-                            else { setMascot(); }
-                        break;
-                }
-            }
-
-            function toggleMascot() {
-                switch (mascot_status) {
-                    case 0:
-                        setMascot();
-                        break;
-                    case 1:
-                        hideMascot();
-                        break;
-                }
-            }
-            
-            function setMascot() {
-                mascot_status = 1;
-                switch (element_theme.getAttribute("href")) {
-                    case "css/theme.css":
-                        element_html.style.backgroundImage = "url(img/mascot1.png)";
-                        break;
-                    case "css/theme-dark.css":
-                        element_html.style.backgroundImage = "url(img/mascot2.png)";
-                        break;
-                }
-            }
-            
-            function hideMascot() {
-                mascot_status = 0;
-                element_html.style.backgroundImage = "url()";
-            }
-    
-            window.onload = function() {
-                hideMascot();
-                element_html.style.transition = "all 0.25s";
-                element_html.style.setProperty("-webkit-transition", "all 0.25s");
-            };
-        </script>
+        <!-- BEGIN: Scripts -->
+        <script src="js/jquery.js"></script>
+        <!-- Keep this order to be safe -->
+        <script src="js/main.js"></script>
+        <script src="js/theme.js"></script>
+        <script src="js/sidebar.js"></script>
+        <script src="js/load.js"></script>
+        <!-- END: Scripts -->
     </head>
     <body>
+        <!-- BEGIN: Mascot -->      <!-- Keep this here, before everything. -->
+        <div id="mascot"></div>     <!-- This block is required for mascots -->
+        <!-- END: Mascot -->        <!-- to work. Must be empty. -->
+        
+        <!-- BEGIN: Content -- Edit this part freely -->
         <header>
             <h1>Homepage</h1>
         </header>
@@ -85,13 +38,14 @@
                 <ul>
                     <li>Anime</li>
                     <li><a href="http://nyaa.se">Nyaa</a></li>
-                    <li><a href="http://gelbooru.com">Gelbooru</a></li>
+                    <li><a href="http://chan.sankakucomplex.com">Sankaku</a></li>
                     <li><a href="http://danbooru.donmai.us">Danbooru</a></li>
                 </ul>
                 <ul>
                     <li>Resources</li>
                     <li><a href="http://wiki.installgentoo.com">/g/wiki</a></li>
                     <li><a href="http://github.com/JackosDev/Minimo-Homepage">GitHub</a></li>
+                    <li><a href="home.html">More Examples</a></li>
                 </ul>
             </nav>
 
@@ -100,13 +54,26 @@
                     <input type="text" name="q" placeholder="Google Search" autofocus />
                 </form>
             </section>
-
-            <section style="margin-top: 30px;">
-                <a class="block color full-size" href="home.html">Wanna see more&nbsp;<i>blocks</i>&nbsp;in action?</a>
-                
-                <span class="block button" onclick="toggleTheme()">Change Theme</span>
-                <span class="block button" onclick="toggleMascot()">Toggle Mascot</span>
-           </section>
         </main>
+        <!-- END: Content -->
+
+        <!-- BEGIN: Sidebar -- Feel free to ignore this part -->
+        <div id="sidebar-wrapper">
+            <div class="sidebar-togglebutton"></div>
+            <div id="sidebar">
+                <span class="category">Settings</span>
+                <span onclick="mascotToggle()">Toggle mascot</span>
+                <span onclick="themeToggle()">Change theme</span>
+
+                <span class="category">Custom mascot <input type="checkbox" class="checkbox" id="custom_mascot" /></span>
+                <span>Position <input type="text" id="custom_mascot_pos"/></span>
+                <span>URL <input type="text" id="custom_mascot_url" /></span>
+                <span>Size <input type="text" id="custom_mascot_size" /></span>
+
+                <span class="category">Custom theme <input type="checkbox" class="checkbox" id="custom_theme" /></span>
+                <span>URL <input type="text" id="custom_theme_url" /></span>
+            </div>
+        </div>
+        <!-- END: Sidebar -->
     </body>
 </html>
