@@ -8,13 +8,10 @@
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <link rel="stylesheet" type="text/css" href="css/theme.css" id="theme" />
 
-        <!-- BEGIN: Scripts -->
+        <!-- BEGIN: Scripts -- Keep this order to be safe -->
         <script src="js/jquery.js"></script>
-        <!-- Keep this order to be safe -->
+        <script src="js/settings.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/theme.js"></script>
-        <script src="js/sidebar.js"></script>
-        <script src="js/load.js"></script>
         <!-- END: Scripts -->
     </head>
     <body>
@@ -56,24 +53,5 @@
             </section>
         </main>
         <!-- END: Content -->
-
-        <!-- BEGIN: Sidebar -- Feel free to ignore this part -->
-        <div id="sidebar-wrapper">
-            <div class="sidebar-togglebutton"></div>
-            <div id="sidebar">
-                <span class="category">Settings</span>
-                <span onclick="mascotToggle()">Toggle mascot</span>
-                <span onclick="themeToggle()">Change theme</span>
-
-                <span class="category">Custom mascot <input type="checkbox" class="checkbox" id="custom_mascot" /></span>
-                <span>Position <input type="text" id="custom_mascot_pos"/></span>
-                <span>URL <input type="text" id="custom_mascot_url" /></span>
-                <span>Size <input type="text" id="custom_mascot_size" /></span>
-
-                <span class="category">Custom theme <input type="checkbox" class="checkbox" id="custom_theme" /></span>
-                <span>URL <input type="text" id="custom_theme_url" /></span>
-            </div>
-        </div>
-        <!-- END: Sidebar -->
     </body>
 </html>

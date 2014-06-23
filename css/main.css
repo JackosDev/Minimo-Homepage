@@ -27,7 +27,7 @@ main {
     display: block;
     margin: 0 auto;
     padding: 0;
-    width: 50%;
+    width: 50%;  /* You might feel the need to edit this */
 }
 
 nav,
@@ -115,79 +115,3 @@ input {
     z-index: -1;
 }
 
-
-/* Sidebar */
-#sidebar-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 300px;
-}
-
-.sidebar-togglebutton {
-    position: fixed;
-    top: 0;
-    left: -8px;
-    margin: 3px 0;
-    padding: 0;
-    height: 30px;
-    width: 30px;
-    background-image: url(../images/menu.png);
-    cursor: pointer;
-    transition: all 0.25s;
-    opacity: 0;
-    z-index: 1;
-}
-
-.sidebar-togglebutton:hover {
-    opacity: 1;
-}
-
-#sidebar {
-    position: absolute;
-    top: 0;
-    left: calc(-300px - 2px);    /* -300px total, -2px of shadow */
-    height: 100%;
-    width: 300px;
-    margin: 0;
-    box-shadow: 1px 0 2px rgba(0,0,0, 0.3);
-    background-color: #fff;
-    color: #aaa;
-    transition: all 0.25s;
-}
-
-#sidebar > * {
-    margin: 0;
-    padding: 0 5px 0 5px 0;
-}
-
-#sidebar span {
-    display: block;
-    padding: 10px 0 10px 25px;
-    background-color: #fff;
-    font-size: 11pt;
-    cursor: pointer;
-}
-
-#sidebar span:hover {
-    background-color: #f7f7f7;
-}
-
-#sidebar span.category {
-    padding: 10px 0 10px 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: #eaeaea;
-}
-
-#sidebar span input {
-    position: absolute;
-    right: 10px;
-    padding: 0 5px;
-    border-radius: 3px;
-    border-bottom: 1px solid #ccc;
-    background-color: inherit;
-    background-image: none;
-    font-style: normal;
-}
