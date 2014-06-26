@@ -2,7 +2,7 @@ Minimo
 =======
 A simple homepage/startpage alternative made with HTML + CSS. [[Live Demo](http://jackosdev.github.io/Minimo-Homepage/)]  
 
-**Important:** This page works with Firefox 29.0 or better. Other browsers may present problems.
+**Important:** This page should work without problems in Firefox 28.0, Chrome 29.0, Opera 17.0 and IE 11.0.
 
 Customization
 -------------

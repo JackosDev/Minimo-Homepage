@@ -48,7 +48,7 @@ section > * {
     flex-flow: row wrap;
     transition: box-shadow 0.25s;
     border-radius: 3px;
-    border-bottom: 2px solid;
+    border-bottom-style: solid;
     margin: 0 5px 10px 5px;
     padding: 10px;
 }
@@ -63,18 +63,17 @@ section > * {
 }
 
 .block.color.half-size {
-    flex-basis: calc(50% - (30px + 3px));
-}
+    flex-basis: calc(50% - (30px + 3px));   /* 3px = block color left border width */
+}                                           /* change depending on your theme      */
 
 .block.color {
     border-bottom: 0;
-    border-left: 3px solid;
+    border-left-style: solid;
 }
 
 .block.button {
     border-bottom: 3px solid rgba(0,0,0, 0.15);
     font-weight: bold;
-    cursor: pointer;
     justify-content: center;
 }
 
@@ -114,4 +113,3 @@ input {
     background-repeat: no-repeat;
     z-index: -1;
 }
-

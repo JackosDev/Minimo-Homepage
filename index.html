@@ -8,18 +8,13 @@
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <link rel="stylesheet" type="text/css" href="css/theme.css" id="theme" />
 
-        <!-- BEGIN: Scripts -- Keep this order to be safe -->
         <script src="js/jquery.js"></script>
-        <script src="js/settings.js"></script>
+        <script src="js/config.js"></script>
         <script src="js/main.js"></script>
-        <!-- END: Scripts -->
     </head>
     <body>
-        <!-- BEGIN: Mascot -->      <!-- Keep this here, before everything. -->
-        <div id="mascot"></div>     <!-- This block is required for mascots -->
-        <!-- END: Mascot -->        <!-- to work. Must be empty. -->
-        
-        <!-- BEGIN: Content -- Edit this part freely -->
+        <div id="mascot"></div>
+
         <header>
             <h1>Homepage</h1>
         </header>
@@ -42,7 +37,6 @@
                     <li>Resources</li>
                     <li><a href="http://wiki.installgentoo.com">/g/wiki</a></li>
                     <li><a href="http://github.com/JackosDev/Minimo-Homepage">GitHub</a></li>
-                    <li><a href="home.html">More Examples</a></li>
                 </ul>
             </nav>
 
@@ -51,7 +45,11 @@
                     <input type="text" name="q" placeholder="Google Search" autofocus />
                 </form>
             </section>
+            
+            <section>
+                <a href="home.html" class="block color half-size">More blocks in action</a>
+                <span class="block color half-size" onclick="changeTheme()" style="cursor: pointer;">Change theme</a>
+            </section>
         </main>
-        <!-- END: Content -->
     </body>
 </html>
