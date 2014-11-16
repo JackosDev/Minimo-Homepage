@@ -6,38 +6,45 @@
         <title>Homepage</title>
 
         <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <link rel="stylesheet" type="text/css" href="css/theme.css" id="theme" />
-
-        <script src="js/jquery.js"></script>
-        <script src="js/config.js"></script>
-        <script src="js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/theme.css" />
     </head>
     <body>
         <header>
             <h1>Homepage</h1>
         </header>
 
-        <main>
-            <nav class="block full-size" id="navigation">
-            <!--
-                <ul>
-                    <li>Category</li>
-                    <li>Link 1</li>
-                    <li>Link 2</li>
-                </ul>
-            -->
-            </nav>
+		<section class="block-content">
+			<ul>
+				<li>4chan</li>
+				<li>Anime & Manga</li>
+				<li>Technology</li>
+				<li>Retro Games</li>
+			</ul>
+			<ul>
+				<li>Anime</li>
+				<li>Nyaa</li>
+				<li>Sankaku</li>
+				<li>Sad Panda</li>
+			</ul>
+			<ul>
+				<li>Resources</li>
+				<li>/g/wiki</li>
+				<li>/emugen/ wiki</li>
+				<li>My GitHub</li>
+			</ul>
+		</section>
 
-            <section class="block full-size">
-                <form action="https://google.com/search" method="get" >
-                    <input type="text" name="q" placeholder="Google Search" autofocus />
-                </form>
-            </section>
-            
-            <section>
-                <a href="home.html" class="block color half-size">More blocks in action</a>
-                <span class="block color half-size" onclick="changeTheme()" style="cursor: pointer;">Change theme</a>
-            </section>
-        </main>
+		<section class="block-content">
+			<form class="clear-flex" action="https://google.com/search" method="get" >
+				<input type="text" name="q" placeholder="Google Search" autofocus />
+			</form>
+		</section>
+		
+		<section class="block-wrapper">
+			<a href="#"><div class="block">More blocks in action</div></a>
+			<a href="#"><div class="block">Change theme</div></a>
+		</section>
+		
+		<div id="mascot"></div>
     </body>
 </html>
