@@ -1,51 +1,59 @@
+/* Header */
 
+h1 {
+    color: #9E9E9E;
+    font-size: 40pt;
+    font-weight: bold;
+}
+
+/* Body */
 
 body {
-	font-size: 10pt;
-	font-family: Arial;
-	background-color: #E0E0E0;
-	color: #757575;
+    font-size: 10pt;
+    font-family: Arial;
+    background-color: #e0e0e0;
+    color: #757575;
 }
 
-header  h1 {
-	color: #9E9E9E;
-	font-size: 40pt;
-	font-weight: bold;
-}
+/* Blocks */
 
 .block-content,
 .block {
-	background-color: #FFF;
-	box-shadow: 0 1px 2px rgba(0,0,0, 0.3);
-	border-radius: 2px;
-	transition: box-shadow 0.25s;
+    background-color: #FFF;
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.15),
+                0 2px 3px rgba(0,0,0, 0.3);
+    border-radius: 2px;
+    transition: box-shadow 0.25s ease-in-out;
 }
 
 .block-content:hover,
 .block:hover {
-	box-shadow: 0 4px 10px -4px rgba(0,0,0, 0.3),
-				0 0px 2px rgba(0,0,0, 0.15);
-	z-index: 1;
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.15),
+                0 4px 6px rgba(0,0,0, 0.28);
+    z-index: 1;
 }
 
 .block-content ul li:first-child {
-	font-weight: bold;
-}
-
-input {
-	flex-basis: 100%;
-	background: url("../images/search.png") no-repeat right;
-	padding-right: 16px;
-	color: #757575;
+    font-weight: bold;
 }
 
 a {
-	text-decoration: none;
-	color: #757575;
+    text-decoration: none;
+    color: #757575;
 }
 
+/* Form */
+
+input {
+    background: url(../images/search.png) no-repeat right;
+    padding-right: 16px;
+    color: #757575;
+}
+
+/* Mascot */
+
 #mascot {
-	background-image: url("../images/mascots/mascot.png");
-	background-position: left bottom;
-	background-size: auto 400px;
+    background-image: url("../images/mascots/mascot.png");
+    background-position: left bottom;
+    background-size: auto 400px;
 }
