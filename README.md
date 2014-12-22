@@ -10,7 +10,7 @@ A simple homepage/startpage alternative made with HTML + CSS + jQuery.
 Downloads
 ----------
 | Version | Description |
-|-----------------------|
+|---------|-------------|
 | **[Basic](https://github.com/JackosDev/Minimo-Homepage/archive/basic.zip)** | Plain HTML + CSS. |
 | **[Plus](https://github.com/JackosDev/Minimo-Homepage/archive/master.zip)** | Same as above + jQuery for some fancy effects and functions. |
 
