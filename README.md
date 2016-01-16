@@ -27,3 +27,12 @@ The `main.css` file is mostly rules setting the structure.
 - Don't forget the `,` after every `""` and none if is the last one.  
 - Use `"---", "---",` to create a new category/list.
 - You can disable the configuration file and its features if you want. Just change `minimoEnableJs` to `false`.
+
+
+License
+-------
+Copyright © 2016 -- JackosDev @ github
+
+This work is free. You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To Public License, Version 2,
+as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
